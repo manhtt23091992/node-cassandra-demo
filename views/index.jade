@@ -1,0 +1,20 @@
+extends layout
+
+block content
+  div(class="row")
+    div(class="col-md-12")
+      span(class="error") #{status}
+  form(id="loginForm" class="form-login" action="/login" method="POST")
+    fieldset
+      div(class="form-group")
+        span(class="input-icon")
+          input(class="form-control" name="username" placeholder="UserName")
+          i(class="fa icons-form fa-envelope")
+      div(class="form-group")
+        span(class="input-icon")
+          input(type="password" class="form-control password" name="password" placeholder="Password")
+          i(class="fa icons-form fa-lock")
+      div(class="form-actions")
+        div(class="form-group")
+          input(class="btn btn-primary form-control" type="submit" value="LOGIN")
+
